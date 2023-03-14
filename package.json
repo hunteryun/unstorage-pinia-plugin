@@ -1,15 +1,15 @@
 {
-  "name": "unstorage-pinia-plugin",
-  "version": "1.0.1",
+  "name": "@drupalhunter/unstorage-pinia-plugin",
+  "version": "1.0.2",
   "description": "Pinia store persistence and hydration using unstorage",
   "keywords": [
     "Pinia",
     "unstorage",
     "Vue"
   ],
-  "repository": "https://github.com/BreizhReloaded/unstorage-pinia-plugin",
+  "repository": "https://github.com/hunteryun/unstorage-pinia-plugin",
   "license": "MIT",
-  "author": "BreizhReloaded <breizhreloaded@outlook.com>",
+  "author": "hunteryun",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -24,20 +24,24 @@
     "watch": "vite build --watch"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.0",
-    "esbuild": "^0.14.7",
-    "eslint": "^8.5.0",
-    "pinia": "^2.0.6",
-    "rimraf": "^3.0.2",
-    "sort-package-json": "^1.53.1",
-    "typescript": "^4.5.4",
-    "unstorage": "^0.3.3",
-    "vite": "^2.8.6",
-    "vite-plugin-dts": "^0.9.10"
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "esbuild": "^0.17.11",
+    "eslint": "^8.36.0",
+    "pinia": "^2.0.33",
+    "rimraf": "^4.4.0",
+    "sort-package-json": "^2.4.1",
+    "typescript": "^4.9.5",
+    "unstorage": "^1.4.0",
+    "vite": "^4.1.4",
+    "vite-plugin-dts": "^2.1.0"
   },
   "peerDependencies": {
-    "pinia": "^2.0.6",
-    "unstorage": "^0.3.3"
+    "pinia": "^2.0.33",
+    "unstorage": "^1.4.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
