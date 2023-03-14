@@ -5,11 +5,7 @@ Persist and hydrate your pinia state using [unstorage](https://github.com/unjs/u
 ## Install
 ```sh
 # npm
-npm i unstorage unstorage-pinia-plugin
-
-# yarn
-yarn add unstorage unstorage-pinia-plugin
-```
+npm install unstorage @drupalhunter/unstorage-pinia-plugin
 
 ## Usage
 You can use any available [unstorage driver](https://github.com/unjs/unstorage#drivers). Drivers can be set either globally or per store. Locally defined driver overrides global definition.
@@ -18,7 +14,7 @@ Global driver:
 ```ts
 // pinia.ts
 import { createPinia } from 'pinia';
-import { createUnstoragePlugin } from 'unstorage-pinia-plugin';
+import { createUnstoragePlugin } from '@drupalhunter/unstorage-pinia-plugin';
 import localStorageDriver from 'unstorage/drivers/localstorage';
 
 const pinia = createPinia();
@@ -34,7 +30,7 @@ Per store driver:
 ```ts
 // pinia.ts
 import { createPinia } from 'pinia';
-import { createUnstoragePlugin } from 'unstorage-pinia-plugin';
+import { createUnstoragePlugin } from '@drupalhunter/unstorage-pinia-plugin';
 
 const pinia = createPinia();
 
@@ -47,7 +43,7 @@ export default pinia;
 // store.ts
 import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
-import { defineStoreStorage } from 'unstorage-pinia-plugin';
+import { defineStoreStorage } from '@drupalhunter/unstorage-pinia-plugin';
 import localStorageDriver from 'unstorage/drivers/localstorage';
 
 export const useStore = defineStore(
@@ -65,7 +61,7 @@ export const useStore = defineStore(
 
 If you prefer the option way:
 ```ts
-import { defineUnstore } from 'unstorage-pinia-plugin';
+import { defineUnstore } from '@drupalhunter/unstorage-pinia-plugin';
 import localStorageDriver from 'unstorage/drivers/localstorage';
 
 export const useStore = defineUnstore(
